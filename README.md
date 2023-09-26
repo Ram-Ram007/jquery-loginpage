@@ -5,3 +5,5 @@
 ## Using Regular expression for validation 
 
 ## Using array for validation
+
+## Added validation also for pasword length
