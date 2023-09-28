@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jquery</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-        
+  <link rel="stylesheet" href="style.css">
+  <title>login page</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <form id="login-form">
-        <h1>Login page</h1>
-        <label for="Email">Email</label>
-        <input type="email" id="Email" required>
-        <label for="pass">Password</label>
-        <input type="password" id="pass">
-        <button type="submit" id="submit">log in </button>
-    </form>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                      
+                        <input type="email" id="Email">
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        
+                        <input type="password" id="pass">
+                        <label for="pass">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
+                      
+                    </div>
+                    <button id="submit">Log in</button>
+                    <div class="register">
+                        <p>Don't have a account <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
 </body>
 </html>
