@@ -7,3 +7,5 @@
 ## Using array for validation
 
 ## Added validation also for pasword length
+
+## Added css to the page.

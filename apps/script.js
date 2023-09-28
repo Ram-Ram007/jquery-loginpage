@@ -2,6 +2,7 @@ $(document).ready(function () {
     const arr = [];
     const specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '{', '}', '[', ']', ':', ';', '<', '>', ',', '.', '?', '~', '\\', '-'];
     const btnSubmit = $("#submit");
+    const messageContainer = $("#messageContainer");
 
     btnSubmit.click(function (e) {
         e.preventDefault();
@@ -12,6 +13,8 @@ $(document).ready(function () {
 
         // Email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        messageContainer.empty(); // Clear any previous messages
 
         if (email && emailRegex.test(email)) {
             if (password.length >= 8) {
@@ -30,14 +33,19 @@ $(document).ready(function () {
                     };
                     arr.push(profile);
                     console.log(JSON.stringify(arr));
+                    // Display success message with red text color
+                    messageContainer.html('<p style="color: green;">Login successful.</p>');
                 } else {
-                    alert("Password must contain at least one special character");
+                    // Display password error message with red text color
+                    messageContainer.html('<p style="color: red;">Password must contain at least one special character.</p>');
                 }
             } else {
-                alert("Password should be at least 8 characters");
+                // Display password length error message with red text color
+                messageContainer.html('<p style="color: red;">Password should be at least 8 characters.</p>');
             }
         } else {
-            alert("Enter a valid email");
+            // Display email validation error message with red text color
+            messageContainer.html('<p style="color: red;">Enter a valid email.</p>');
         }
     });
 });
